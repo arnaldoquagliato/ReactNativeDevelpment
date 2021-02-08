@@ -1,9 +1,17 @@
 {
+<<<<<<< HEAD
   "name": "CursoReact",
   "displayName": "CursoReact",
   "expo": {
     "name": "CursoReact",
     "slug": "CursoReact",
+=======
+  "name": "ArnaldoDevelpment",
+  "displayName": "ArnaldoDevelpment",
+  "expo": {
+    "name": "ArnaldoDevelpment",
+    "slug": "ArnaldoDevelpment",
+>>>>>>> e7b567d3839f4572e49b90a4d749450312f1f4ae
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"

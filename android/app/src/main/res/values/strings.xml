@@ -1,3 +1,7 @@
 <resources>
+<<<<<<< HEAD
     <string name="app_name">CursoReact</string>
+=======
+    <string name="app_name">ArnaldoDevelpment</string>
+>>>>>>> e7b567d3839f4572e49b90a4d749450312f1f4ae
 </resources>

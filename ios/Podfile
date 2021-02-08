@@ -4,7 +4,11 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '10.0'
 
+<<<<<<< HEAD
 target 'CursoReact' do
+=======
+target 'ArnaldoDevelpment' do
+>>>>>>> e7b567d3839f4572e49b90a4d749450312f1f4ae
   use_unimodules!
   config = use_native_modules!
 
@@ -21,8 +25,14 @@ target 'CursoReact' do
   #  post_install do |installer|
   #    flipper_post_install(installer)
   #  end
+<<<<<<< HEAD
   pod 'react-native-safe-area-context', :path => '../node_modules/react-native-safe-area-context'
 
+=======
+  pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
+
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+>>>>>>> e7b567d3839f4572e49b90a4d749450312f1f4ae
 
   pod 'RealmJS', :path => '../node_modules/realm'
 

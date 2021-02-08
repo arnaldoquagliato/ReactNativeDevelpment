@@ -132,7 +132,11 @@ android {
     }
 
     defaultConfig {
+<<<<<<< HEAD
         applicationId "com.cursoreact"
+=======
+        applicationId "com.arnaldodevelpment"
+>>>>>>> e7b567d3839f4572e49b90a4d749450312f1f4ae
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
