@@ -21,4 +21,9 @@ target 'CursoReact' do
   #  post_install do |installer|
   #    flipper_post_install(installer)
   #  end
+  pod 'react-native-safe-area-context', :path => '../node_modules/react-native-safe-area-context'
+
+
+  pod 'RealmJS', :path => '../node_modules/realm'
+
 end
