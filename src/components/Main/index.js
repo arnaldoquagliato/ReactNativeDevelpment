@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import { View, Text, Button, FlatList } from 'react-native';
+import { View, Text, Button, TextInput } from 'react-native';
 import { useEffect } from 'react/cjs/react.development';
 import getRealm from '../../schemas/index'
 import handleGet from '../../services/Programas'      
-
+import postApi from '../../services/HttpService'
 const Main = () => {
   const [path, setPath] = useState('/');
   const [programas, setProgramas] = useState([]);
+  const [value, setValue] = useState('')
   useEffect(() => {
     setPath('/programas')
   }, [])
@@ -19,16 +20,7 @@ const Main = () => {
     }   
     loadProgramas() 
   },[])
-  const renderItem = ({ item }) =>{
-    return (
-      <View>
-        <Text>AQ</Text>
-        <Text>
-          {item.nome}
-        </Text>
-      </View>
-    );
-  }
+  
 
   const deleteItens = async() =>{
     const realm = await getRealm();
@@ -36,16 +28,28 @@ const Main = () => {
       realm.delete(realm.objects('Programas'));
     });
   }
+
+  const handleCOmentario = async() =>{
+    postApi()
+    console.log("comentarios")
+  }
+  
   return( 
     <View style={{flex:1, marginTop:30}}>
       
       <Button onPress={() => handleGet(path)} title={'Programas'}></Button>
-      <Button onPress={() => deleteItens()} title={"delete"}></Button>
-      <FlatList
-        data={programas}
-        renderItem={renderItem}
-        keyExtractor={item => String(item.id)}
-      />
+      <View>
+        <Text>Digite a alteração aqui</Text>
+        <TextInput
+          style={{borderBottomColor:'black'}}
+          multiline
+          onChangeText={text => setValue(text )}
+          value={value}>
+        </TextInput>
+        <Button onPress={() => postApi({comentarios: value, path: '/comentariosDiario'})} title={'EnviarComentario'}></Button>
+
+      </View>
+      
     </View>);
 }
 
